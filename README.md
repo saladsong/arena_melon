@@ -3,11 +3,10 @@
 - traces made for the 3rd kakao arena challenge (melon playlist continuation) [star]
 - could be updated to verify other hypotheses even after the end of the official event :)
 - the final model submitted is basically based on MF(ALS), and CB model for cold-start cases
- > first of all, popularity-based item filterting was done (only 30% of total items was used)
- > for cold-start cases, playlist titles were exploited to make comparison and calculate similarities among them
- > for non-cold cases, MF(ALS) method was applied thanks to _implicit_ library, with a little hyper-parameter tuning
- > for tag prediction, some heuristic approach was made
-   : calculate the tags per each song and again aggregate the tags of the songs in each playlist
+  1) first of all, popularity-based item filterting was done (only 30% of total items was used)
+  2) for cold-start cases, playlist titles were exploited to make comparison and calculate similarities among them
+  3) for non-cold cases, MF(ALS) method was applied thanks to _implicit_ library, with a little hyper-parameter tuning
+  4) for tag prediction, some heuristic approach was made: calculate the tags per each song and again aggregate the tags of the songs in each playlist
    
 - regarding the task as a kind of 'next-item recommendation' problem, several deep learning based approaches were tried..
  : but some showed worse performances than MF, while others were found to hard to optimize for now (will fix soon)
